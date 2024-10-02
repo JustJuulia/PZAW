@@ -5,7 +5,8 @@ function Sci(){
     const inputRef = useRef()
     const handleButoon = () => { 
         console.log(value++)
-        console.log(inputRef.current.value)
+        const json = JSON.parse('{"tekst":"'+inputRef.current.value+'"}')
+        console.log(json.tekst)
     }
     const handleInputText = (event) => {
         //console.log(event.target.value);
