@@ -1,8 +1,23 @@
+import { useRef } from "react";
+
 function Sci(){
-return(<>
+    var value = 0;
+    const inputRef = useRef()
+    const handleButoon = () => { 
+        console.log(value++)
+        console.log(inputRef.current.value)
+    }
+    const handleInputText = (event) => {
+        //console.log(event.target.value);
+        //to powoduje ze po ksazdej zmianie w tekscie wyswietla tekst
+    }
+return(
+<>
 <div class="mojdiv">
-    SCIIII
+    <input type="button" value={"clickers"} onClick={handleButoon}></input>
+    <input ref={inputRef} type="text" id="tekscior" onChange={handleInputText}></input>
 </div>
-</>)
+</>
+)
 }
 export default Sci;
