@@ -19,7 +19,9 @@ function Exercise1(){
         setSelectedValue(event.target.value);
     }
     const clearthis = () =>{
-        window.location.reload()
+        inputRef1.current.value = ""
+        inputRef2.current.value = ""
+        selectRef.current.value = "CPU"
     }
 return(
 <>
