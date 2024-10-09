@@ -5,11 +5,11 @@ import './index.css';
 import App from './App';
 import Sci from './Sci';
 import reportWebVitals from './reportWebVitals';
-
+import NewComponent from './NewComponent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <NewComponent />
     <Sci />
   </React.StrictMode>
 );
