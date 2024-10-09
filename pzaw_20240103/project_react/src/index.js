@@ -6,11 +6,13 @@ import App from './App';
 import Sci from './Sci';
 import reportWebVitals from './reportWebVitals';
 import NewComponent from './NewComponent';
+import Exercise1 from './Exercise1';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <NewComponent />
     <Sci />
+    <Exercise1 />
   </React.StrictMode>
 );
 
