@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
+import MyOwnTable from './MyOwnTable';
 import Sci from './Sci';
 import reportWebVitals from './reportWebVitals';
 import NewComponent from './NewComponent';
@@ -13,6 +14,7 @@ root.render(
     <NewComponent />
     <Sci />
     <Exercise1 />
+    <MyOwnTable/>
   </React.StrictMode>
 );
 
