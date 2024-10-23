@@ -29,8 +29,8 @@ return(
     <>
      <input type="range" min="0" max="100" onChange={handleChange} value={value}></input>
         {value}
-    <div class="allarr">
-    <div> {arr.slice(0,value)} </div>
+    <div >
+    <div class="allarr"> {arr.slice(0,value)} </div>
     </div>
     </>
 )

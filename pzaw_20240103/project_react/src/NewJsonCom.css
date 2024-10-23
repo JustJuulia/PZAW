@@ -1,10 +1,11 @@
 .thingie{
     border: 2px solid black;
-    width: 200px;
-    height: fit-content;
+    width: 16%;
     float: left;
+    text-align: center;
 }
 .allarr{
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
 }
