@@ -1,0 +1,11 @@
+.thingie{
+    border: 2px solid black;
+    width: 20%;
+    height: fit-content;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+}
+.allarr{
+    display: flex;
+}

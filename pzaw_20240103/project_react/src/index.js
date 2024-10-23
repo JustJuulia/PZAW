@@ -8,6 +8,7 @@ import Sci from './Sci';
 import reportWebVitals from './reportWebVitals';
 import NewComponent from './NewComponent';
 import Exercise1 from './Exercise1';
+import Exercise_2310 from './Exercise_2310';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ root.render(
     <Sci />
     <Exercise1 />
     <MyOwnTable/>
+    <Exercise_2310 />
   </React.StrictMode>
 );
 
