@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import NewComponent from './NewComponent';
 import Exercise1 from './Exercise1';
 import Exercise_2310 from './Exercise_2310';
+import AxiosExample from './AxiosExample';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ root.render(
     <Exercise1 />
     <MyOwnTable/>
     <Exercise_2310 />
+    <AxiosExample />
   </React.StrictMode>
 );
 
