@@ -10,15 +10,17 @@ import NewComponent from './NewComponent';
 import Exercise1 from './Exercise1';
 import Exercise_2310 from './Exercise_2310';
 import AxiosExample from './AxiosExample';
+import Exercise_tablejson from './exam_exercise1702/Exercise_tablejson';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NewComponent />
+    {/* <NewComponent />
     <Sci />
     <Exercise1 />
     <MyOwnTable/>
     <Exercise_2310 />
-    <AxiosExample />
+    <AxiosExample /> */}
+  <Exercise_tablejson />
   </React.StrictMode>
 );
 
