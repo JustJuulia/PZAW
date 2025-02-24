@@ -63,4 +63,4 @@ function Exercise_2402() {
   );
 }
 
-export default App;
+export default Exercise_2402;
