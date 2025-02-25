@@ -1058,4 +1058,5 @@ app.get('/getdata', (req, res) => {
         ];
     res.send(data);
 });
+
 application.listen(8000, () => console.log('servere started'));
