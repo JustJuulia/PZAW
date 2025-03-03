@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 function Sci_checkbox({force_upd}) {
   const checkboxRef = useRef();
   const [checkbox_state, setCheckboxState] = useState(false);
-  console.log('force w scicheckbox: ',force_upd);
   return (
     <>
       <input type="checkbox" ref={checkboxRef} value={checkbox_state}></input>

@@ -5,8 +5,8 @@ const [mytext, setText] = useState(' ');
 const myRef_text = useRef();
 return(
     <>
-    <input type='text' defaultValue={mytext} ref={myRef_text}></input>
-    <button onClick={(e) => setText(myRef_text.current.value)} disabled={force_upd}> UPDATE </button>
+    <input type='text' defaultValue={mytext} ref={myRef_text} onChange={force_upd?() => setText(myRef_text.current.value):null}></input>
+    <button onClick={() => setText(myRef_text.current.value)} disabled={force_upd}> UPDATE </button>
     <p>Tekst : {mytext}</p>
     </>
 )
