@@ -12,6 +12,7 @@ import Exercise_2310 from './Exercise_2310';
 import AxiosExample from './AxiosExample';
 import Exercise_tablejson from './exam_exercise1702/Exercise_tablejson';
 import All_inputs from"./exercise_inputs/All_inputs";
+import Exercise_1303 from './exercise_1303/Table_Exercise';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -22,8 +23,10 @@ root.render(
     <Exercise_2310 />
     <AxiosExample /> 
     <Exercise_tablejson />
-    */}
     <All_inputs />
+    */}
+    <Exercise_1303 />
+    
   </React.StrictMode>
 );
 
