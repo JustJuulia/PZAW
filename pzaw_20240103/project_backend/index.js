@@ -1,5 +1,6 @@
 const express = require('express')
 const application = express()
+
 application.get("/", (request, response) => {response.send('<div>asdadsssssssssssssa</div>')})
 application.get("/abc", (request, response) => {response.send('<div><h1>jol</h1></div>')})
 application.put("/mojput", (request, response) => {response.send('<a>asdadaddddddddddddddd</a>')})
@@ -437,7 +438,7 @@ application.get('/task_json', (req, res) => {
 res.send(data);
 })
 //EXAM EXERCISE FROM 24.02
-app.get('/getdata', (req, res) => {
+application.get('/getdata', (req, res) => {
     const data = 
         [
             {
@@ -1058,5 +1059,59 @@ app.get('/getdata', (req, res) => {
         ];
     res.send(data);
 });
-
+application.get('/getdataprep', (req, res) => {
+    const data = {
+        "beer": [
+            "./beer/01.png",
+            "./beer/02.png",
+            "./beer/03.png",
+            "./beer/04.png",
+            "./beer/05.png",
+            "./beer/06.png",
+            "./beer/07.png",
+            "./beer/08.png"
+        ],
+        "fruit": [
+            "./fruit/1.png",
+            "./fruit/10.png",
+            "./fruit/11.png",
+            "./fruit/13.png",
+            "./fruit/26.png",
+            "./fruit/36.png",
+            "./fruit/4.png",
+            "./fruit/8.png"
+        ],
+        "herb": [
+            "./herb/1.png",
+            "./herb/13.png",
+            "./herb/15.png",
+            "./herb/28.png",
+            "./herb/29.png",
+            "./herb/37.png",
+            "./herb/7.png",
+            "./herb/9.png"
+        ],
+        "undead": [
+            "./undead/1.png",
+            "./undead/10.png",
+            "./undead/13.png",
+            "./undead/14.png",
+            "./undead/26.png",
+            "./undead/38.png",
+            "./undead/4.png",
+            "./undead/45.png"
+        ],
+        "vegetable": [
+            "./vegetable/1.png",
+            "./vegetable/15.png",
+            "./vegetable/20.png",
+            "./vegetable/22.png",
+            "./vegetable/27.png",
+            "./vegetable/41.png",
+            "./vegetable/5.png",
+            "./vegetable/9.png"
+        ]
+    };    
+    res.send(data);
+})
 application.listen(8000, () => console.log('servere started'));
