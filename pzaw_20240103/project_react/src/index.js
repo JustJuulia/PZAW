@@ -15,10 +15,12 @@ import All_inputs from"./exercise_inputs/All_inputs";
 import Exercise_1303 from './exercise_1303/Table_Exercise';
 import AllIn from "./exercise_1703/AllIn";
 import Exam_Prep from "./exam_prep/Exam_Prep";
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    {/* <NewComponent />
+import Router_User from "./exercise_0204/Router_User";
+
+
+/*
+    <React.StrictMode>
+    <NewComponent />
     <Sci />
     <Exercise1 />
     <MyOwnTable/>
@@ -28,9 +30,16 @@ root.render(
     <All_inputs />
     <Exercise_1303 />
     <AllIn/>
-    */}
     <Exam_Prep/>
-  </React.StrictMode>
+    </React.StrictMode>
+    */
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <>
+  <Router_User />
+    </>
+    
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,6 +1,6 @@
 const express = require('express')
 const application = express()
-
+let data_users = [];
 application.get("/", (request, response) => {response.send('<div>asdadsssssssssssssa</div>')})
 application.get("/abc", (request, response) => {response.send('<div><h1>jol</h1></div>')})
 application.put("/mojput", (request, response) => {response.send('<a>asdadaddddddddddddddd</a>')})
@@ -23,9 +23,25 @@ application.post("/newjson", (request, response) => {
     response.send();
 });
 application.use("/sci/4c/abc", sci_router)
-
+application.get("/tanstackform/data_users", (req, res) => {
+res.send(data_users);
+});
+application.post("/tanstackform/newuser",(req, res) => {
+    const email = req.query.email;
+    const password = req.query.password;
+    const gender = req.query.gender;
+    const school = req.query.school;
+    const new_user = {
+        "mail" : email,
+        "password" : password,
+        "gender" : gender,
+        "school" :school
+    }
+    data_users.push(new_user);
+    console.log(data_users);
+});
 //EXAM EXERCISEEEEEEEEEE
-application.get('/task_json', (req, res) => {
+application.post('/task_json', (req, res) => {
     const data = {
     "employees": [
         {
