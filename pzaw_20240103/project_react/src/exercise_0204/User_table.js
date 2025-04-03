@@ -1,7 +1,12 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "@tanstack/react-router";
-export default function User_table(){
+import { createFileRoute } from "@tanstack/react-router";
+ 
+ export const Route = createFileRoute("/users")({
+   component: User_table,
+ });
+function User_table(){
     const [users, setUsers] = useState([]);
     const getusers = () => {
         axios

@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -15,7 +15,18 @@ import All_inputs from"./exercise_inputs/All_inputs";
 import Exercise_1303 from './exercise_1303/Table_Exercise';
 import AllIn from "./exercise_1703/AllIn";
 import Exam_Prep from "./exam_prep/Exam_Prep";
-import Router_User from "./exercise_0204/Router_User";
+import { createRouter, RouterProvider } from "@tanstack/react-router";
+import { createRoute, createRootRoute } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen.ts";
+const router = createRouter({
+  routeTree,
+  context: {},
+  defaultPreload: "intent",
+  scrollRestoration: true,
+  defaultStructuralSharing: true,
+  defaultPreloadStaleTime: 0,
+});
+
 
 
 /*
@@ -33,16 +44,13 @@ import Router_User from "./exercise_0204/Router_User";
     <Exam_Prep/>
     </React.StrictMode>
     */
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <>
-  <Router_User />
-    </>
-    
-  
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();
+    const rootElement = document.getElementById("app");
+    if (rootElement && !rootElement.innerHTML) {
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(
+        <StrictMode>
+          <RouterProvider router={router} />
+        </StrictMode>,
+      );
+    };
+reportWebVitals();

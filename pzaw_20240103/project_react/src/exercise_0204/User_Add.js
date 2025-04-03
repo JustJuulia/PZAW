@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { useForm } from "@tanstack/react-form";
+import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import axios from "axios";
-export default function User_Add() {
-  const [users, setUsers] = useState([]);
+export const Route = createFileRoute("/register")({
+  component: User_Add,
+});
+
+function User_Add() {
+
+
     function password_validate(password) {
         const re = {
           capital: /[A-Z]/, 

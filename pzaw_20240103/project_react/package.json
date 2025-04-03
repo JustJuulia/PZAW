@@ -5,6 +5,7 @@
   "dependencies": {
     "@tanstack/react-form": "^1.2.4",
     "@tanstack/react-router": "^1.114.33",
+    "@tanstack/react-router-devtools": "^1.114.34",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
